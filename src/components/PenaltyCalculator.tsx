@@ -62,8 +62,8 @@ export function PenaltyCalculator() {
 
   const calculateSchedule = (): ScheduleRow[] => {
     const schedule: ScheduleRow[] = [];
-    let currentDate = new Date(loanDetails.maturityDate);
-    let baseInterest = (loanDetails.principal * (loanDetails.baseInterestRate / 100));
+    const currentDate = new Date(loanDetails.maturityDate);
+    const baseInterest = (loanDetails.principal * (loanDetails.baseInterestRate / 100));
     
     // Base return
     schedule.push({
